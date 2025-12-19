@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Str {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the size of P array:");
+        int P = sc.nextInt();
+        System.out.println("Enter " + P + " elements:");
+        int[] a = new int[P];
+        for (int i = 0; i < P; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        System.out.println("Enter the size of Q array:");
+        int Q = sc.nextInt();
+        System.out.println("Enter " + Q + " elements:");
+        int[] b = new int[Q];
+        for (int i = 0; i < Q; i++) {
+            b[i] = sc.nextInt();
+        }
+
+        int[] c = new int[P + Q];
+
+        // Copy array a into c
+        for (int i = 0; i < P; i++) {
+            c[i] = a[i];
+        }
+
+        // Copy array b into c
+        for (int i = 0; i < Q; i++) {
+            c[P + i] = b[i];
+        }
+
+        System.out.println("Merged array:");
+        for (int i = 0; i < c.length; i++) {
+            System.out.print(c[i] + " ");
+        }
+
+        sc.close();
+    }
+}
