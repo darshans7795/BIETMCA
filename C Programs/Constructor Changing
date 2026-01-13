@@ -1,0 +1,44 @@
+package Constructorchaining;
+
+public class RedBull {
+	
+	String size;
+	String color;
+	double price;
+	
+	RedBull (String size){
+		this.size = size;
+		System.out.println("Size: "+size);
+		
+	}
+	
+	RedBull (String size, String color) {
+		this(size);
+		this.color = color;
+		System.out.println("Size: "+size);
+		System.out.println("Color: "+color);
+	}
+	
+	RedBull(String size,String color,int price) {
+		this(size,color);
+		this.price = price;
+		System.out.println("Size: "+size);
+		System.out.println("Color: "+color);
+		System.out.println("Price: "+price);
+		
+	}
+	
+	public static void main(String[] args) {
+		RedBull  RB = new RedBull("XL","BLUE",999);
+	}
+
+}
+
+// OUT PUT 
+//
+//Size: XL
+//Size: XL
+//Color: BLUE
+//Size: XL
+//Color: BLUE
+//Price: 999
